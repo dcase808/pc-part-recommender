@@ -12,5 +12,7 @@ async def get_recomendation(price: float):
 @app.get('/')
 async def root():
     return {
-        'Get recommendation': '/recommend'
+        'recommendation': {
+            'href': '/recommend'
+        }
     }
