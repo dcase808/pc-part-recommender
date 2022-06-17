@@ -8,3 +8,9 @@ async def get_recomendation(price: float):
     optimizer = Optimizer()
     parts = optimizer.run_optimalization(price)
     return parts
+
+@app.get('/')
+async def root():
+    return {
+        'Get recommendation': '/recommend'
+    }
